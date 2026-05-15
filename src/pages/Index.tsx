@@ -77,13 +77,12 @@ function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-avg-blue/10" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 geo-diagonal rounded flex items-center justify-center">
-            <span className="text-white font-cormorant font-bold text-sm">A</span>
-          </div>
-          <span className={`font-cormorant font-bold text-xl tracking-wide transition-colors ${scrolled ? "text-avg-blue" : "text-white"}`}>
-            AVG-Consult
-          </span>
+        <div className="flex items-center">
+          <img
+            src="https://cdn.poehali.dev/projects/bb377ea6-548c-48d0-8ce1-05c1a810a70b/bucket/f45244a8-affa-4006-9408-a7a2b22ba2ad.jpg"
+            alt="AVG-Consult"
+            className={`h-12 w-auto object-contain transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
+          />
         </div>
 
         <div className="hidden md:flex items-center gap-8">
@@ -487,11 +486,12 @@ function Footer() {
   return (
     <footer className="bg-avg-dark py-10">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-7 h-7 geo-diagonal rounded flex items-center justify-center">
-            <span className="text-white font-cormorant font-bold text-xs">A</span>
-          </div>
-          <span className="font-cormorant font-bold text-white text-lg">AVG-Consult</span>
+        <div className="flex items-center">
+          <img
+            src="https://cdn.poehali.dev/projects/bb377ea6-548c-48d0-8ce1-05c1a810a70b/bucket/f45244a8-affa-4006-9408-a7a2b22ba2ad.jpg"
+            alt="AVG-Consult"
+            className="h-10 w-auto object-contain brightness-0 invert opacity-80"
+          />
         </div>
         <p className="font-golos text-xs text-white/40 text-center">
           © 2009–2026 AVG-Consult. Все права защищены.
