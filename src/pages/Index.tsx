@@ -231,18 +231,6 @@ function About() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-          {TEAM.map((m, i) => (
-            <div key={m.name} className="animate-on-scroll border border-avg-blue/10 rounded-lg p-6 card-hover" style={{ transitionDelay: `${i * 0.1}s` }}>
-              <div className="w-12 h-12 geo-diagonal rounded-full flex items-center justify-center mb-4">
-                <span className="font-cormorant font-bold text-white text-xl">{m.name[0]}</span>
-              </div>
-              <h3 className="font-cormorant font-bold text-xl text-avg-blue">{m.name}</h3>
-              <p className="font-golos text-sm text-avg-blue-light font-medium mt-1">{m.role}</p>
-              <p className="font-golos text-xs text-avg-gray-mid mt-2">{m.exp}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
