@@ -367,9 +367,9 @@ function Contacts() {
 
             <div className="space-y-5 animate-on-scroll">
               {[
-                { icon: "MapPin", label: "Адрес", value: "г. Москва, ул. Тверская, 1, офис 505" },
-                { icon: "Phone", label: "Телефон", value: "+7 (495) 000-00-00" },
-                { icon: "Mail", label: "Email", value: "info@avg-consult.ru" },
+                { icon: "MapPin", label: "Адрес", value: "г. Санкт-Петербург, ал. Евгения Шварца, д. 4, стр.1, кв. 8" },
+                { icon: "Phone", label: "Телефон", value: "+7 (900) 649-00-33" },
+                { icon: "Mail", label: "Email", value: "avg-consult@mail.ru" },
                 { icon: "Clock", label: "Режим работы", value: "Пн–Пт: 9:00 – 19:00" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4">
