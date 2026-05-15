@@ -79,9 +79,9 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
-            src="https://cdn.poehali.dev/projects/bb377ea6-548c-48d0-8ce1-05c1a810a70b/bucket/f45244a8-affa-4006-9408-a7a2b22ba2ad.jpg"
+            src="https://cdn.poehali.dev/projects/bb377ea6-548c-48d0-8ce1-05c1a810a70b/bucket/eefc0370-7397-4df5-b5c7-965438e41450.jpg"
             alt="AVG-Consult"
-            className={`h-11 w-auto object-contain transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
+            className={`h-14 w-auto object-contain transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
           />
           <span className={`font-cormorant font-bold text-xl tracking-wide transition-colors ${scrolled ? "text-avg-blue" : "text-white"}`}>
             AVG-Consult
@@ -154,13 +154,13 @@ function Hero() {
           </div>
 
           <h1 className="font-cormorant font-bold text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] mb-6 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Защита<br />
-            <span className="italic text-avg-blue-light">вашего</span><br />
-            бизнеса
+            Право<br />
+            <span className="italic text-avg-blue-light">на вашей</span><br />
+            стороне
           </h1>
 
           <p className="font-golos text-lg text-white/75 max-w-lg leading-relaxed mb-10 animate-fade-up" style={{ animationDelay: "0.35s" }}>
-            Профессиональная юридическая помощь для бизнеса и частных лиц. Более 15 лет опыта в сложных делах.
+            Профессиональная юридическая помощь для бизнеса и частных лиц.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.5s" }}>
