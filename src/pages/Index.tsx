@@ -254,12 +254,28 @@ function Services() {
 function ConsultForm() {
   const [form, setForm] = useState({ name: "", phone: "", email: "", area: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const areas = ["Корпоративное право", "Судебные споры", "Недвижимость", "Договорная работа", "Трудовое право", "Другое"];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("https://functions.poehali.dev/336780dc-74db-424d-81f1-e56b44fb2a8d", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Ошибка отправки");
+      setSent(true);
+    } catch {
+      setError("Не удалось отправить заявку. Позвоните нам по телефону.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (sent) {
@@ -333,11 +349,16 @@ function ConsultForm() {
         />
       </div>
 
+      {error && (
+        <p className="font-golos text-sm text-red-600 text-center">{error}</p>
+      )}
+
       <button
         type="submit"
-        className="w-full geo-diagonal text-white font-golos font-semibold py-4 rounded hover:opacity-90 transition-opacity text-sm"
+        disabled={loading}
+        className="w-full geo-diagonal text-white font-golos font-semibold py-4 rounded hover:opacity-90 transition-opacity text-sm disabled:opacity-60"
       >
-        Записаться на консультацию
+        {loading ? "Отправляем..." : "Записаться на консультацию"}
       </button>
 
       <p className="font-golos text-xs text-avg-gray-mid text-center">
