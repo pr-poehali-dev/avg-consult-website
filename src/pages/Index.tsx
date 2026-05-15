@@ -214,29 +214,18 @@ function About() {
               временем
             </h2>
             <p className="font-golos text-avg-gray-mid leading-relaxed mb-6 animate-on-scroll">
-              AVG-Consult основана в 2009 году. За 15 лет мы выстроили репутацию фирмы, которой доверяют сложные дела — от корпоративных конфликтов до многомиллиардных сделок.
+              AVG-Consult основана в 2024 году одним из лучших практикующих юристов по трудовому праву в России, с опытом в международной юридической фирме. Мы специализируемся на сложных делах и задачах, где на кону, зачастую — судьба бизнеса.
             </p>
             <p className="font-golos text-avg-gray-mid leading-relaxed mb-8 animate-on-scroll">
-              В команде — только практикующие юристы с опытом работы в ведущих российских и международных фирмах. Мы не берём безнадёжных дел, но честно об этом говорим.
+              Наш подход — глубокое погружение в проблему клиента, превентивная работа с рисками и продуманная защита интересов в суде. Мы не беремся за дела, в которых не уверены на 100%.
             </p>
-
-            <div className="grid grid-cols-2 gap-6 animate-on-scroll">
-              {[["Корпоративное право", "Scale"], ["Судебная защита", "Shield"], ["Сделки M&A", "TrendingUp"], ["Налоговые споры", "Calculator"]].map(([label, icon]) => (
-                <div key={label} className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded bg-avg-blue-pale flex items-center justify-center flex-shrink-0">
-                    <Icon name={icon} size={16} className="text-avg-blue" />
-                  </div>
-                  <span className="font-golos text-sm text-avg-dark font-medium">{label}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="relative animate-on-scroll">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-avg-blue/15 rounded-lg" />
-            <img src={TEAM_IMAGE} alt="Команда AVG-Consult" className="w-full h-80 object-cover rounded-lg shadow-xl relative z-10" />
+            <img src="https://cdn.poehali.dev/projects/bb377ea6-548c-48d0-8ce1-05c1a810a70b/bucket/e357009b-2ece-408e-b1e1-e7f56b6e5da3.JPG" alt="Основатель AVG-Consult" className="w-full h-[480px] object-cover object-top rounded-lg shadow-xl relative z-10" />
             <div className="absolute -bottom-6 -right-6 bg-avg-blue text-white p-6 rounded-lg z-20 shadow-xl">
-              <div className="font-cormorant font-bold text-3xl">2009</div>
+              <div className="font-cormorant font-bold text-3xl">2024</div>
               <div className="font-golos text-xs text-white/80 mt-1">год основания</div>
             </div>
           </div>
