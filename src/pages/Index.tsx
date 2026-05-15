@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/bb377ea6-548c-48d0-8ce1-05c1a810a70b/files/8c300088-4eda-4fdf-8bdd-26f597368818.jpg";
-const TEAM_IMAGE = "https://cdn.poehali.dev/projects/bb377ea6-548c-48d0-8ce1-05c1a810a70b/files/d589110c-dc0a-4c75-a7d4-28860bc9ea39.jpg";
 
 const NAV_LINKS = [
   { href: "#about", label: "О фирме" },
   { href: "#services", label: "Услуги" },
-  { href: "#cases", label: "Кейсы" },
+
   { href: "#contacts", label: "Контакты" },
 ];
 
@@ -20,32 +19,7 @@ const SERVICES = [
   { icon: "Users", title: "Трудовое право", desc: "Кадровое делопроизводство, разработка локальных актов, сопровождение трудовых споров." },
 ];
 
-const CASES = [
-  {
-    tag: "Корпоративное",
-    title: "Защита прав акционеров в споре о контроле над компанией",
-    result: "Суд встал на сторону клиента. Активы защищены.",
-    sum: "380 млн ₽",
-  },
-  {
-    tag: "Недвижимость",
-    title: "Сопровождение сделки по покупке торгового центра",
-    result: "Сделка закрыта в срок, все риски нивелированы.",
-    sum: "1,2 млрд ₽",
-  },
-  {
-    tag: "Судебный спор",
-    title: "Взыскание задолженности с контрагента-банкрота",
-    result: "Долг взыскан полностью через оспаривание сделок.",
-    sum: "47 млн ₽",
-  },
-];
 
-const TEAM = [
-  { name: "Андрей Громов", role: "Управляющий партнёр", exp: "18 лет практики" },
-  { name: "Виктория Валиева", role: "Партнёр, корпоративное право", exp: "12 лет практики" },
-  { name: "Георгий Антонов", role: "Партнёр, судебные споры", exp: "15 лет практики" },
-];
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -275,50 +249,7 @@ function Services() {
   );
 }
 
-function Cases() {
-  return (
-    <section id="cases" className="py-28 bg-avg-blue">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-5 animate-on-scroll">
-            <div className="w-8 h-px bg-avg-blue-light" />
-            <span className="text-avg-blue-light font-golos text-sm font-medium uppercase tracking-widest">Кейсы</span>
-          </div>
-          <h2 className="font-cormorant font-bold text-5xl md:text-6xl text-white animate-on-scroll">
-            Результаты<br />
-            <span className="italic">говорят сами</span>
-          </h2>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {CASES.map((c, i) => (
-            <div
-              key={c.title}
-              className="animate-on-scroll border border-white/15 rounded-lg p-8 hover:bg-white/5 transition-all duration-300"
-              style={{ transitionDelay: `${i * 0.1}s` }}
-            >
-              <span className="inline-block bg-avg-blue-light/20 text-avg-blue-light font-golos text-xs font-medium px-3 py-1 rounded-full mb-5">
-                {c.tag}
-              </span>
-              <h3 className="font-cormorant font-bold text-xl text-white leading-snug mb-4">{c.title}</h3>
-              <p className="font-golos text-sm text-white/60 mb-6 leading-relaxed">{c.result}</p>
-              <div className="border-t border-white/10 pt-5">
-                <div className="font-golos text-xs text-white/40 mb-1">Сумма дела</div>
-                <div className="font-cormorant font-bold text-2xl text-avg-blue-light">{c.sum}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center animate-on-scroll">
-          <p className="font-golos text-white/50 text-sm">
-            * Данные изменены в целях конфиденциальности. Реальные суммы и детали по запросу.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function ConsultForm() {
   const [form, setForm] = useState({ name: "", phone: "", email: "", area: "", message: "" });
@@ -506,7 +437,6 @@ export default function Index() {
       <Hero />
       <About />
       <Services />
-      <Cases />
       <Contacts />
       <Footer />
     </div>
